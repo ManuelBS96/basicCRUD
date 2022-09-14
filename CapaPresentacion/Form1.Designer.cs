@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.textStock = new System.Windows.Forms.TextBox();
+            this.textPrecio = new System.Windows.Forms.TextBox();
+            this.textMarca = new System.Windows.Forms.TextBox();
+            this.textDescripcion = new System.Windows.Forms.TextBox();
+            this.textNombre = new System.Windows.Forms.TextBox();
             this.LblStock = new System.Windows.Forms.Label();
             this.LblPrecio = new System.Windows.Forms.Label();
             this.LblMarca = new System.Windows.Forms.Label();
             this.LblDescripcion = new System.Windows.Forms.Label();
             this.LblNombre = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textNombre = new System.Windows.Forms.TextBox();
-            this.textDescripcion = new System.Windows.Forms.TextBox();
-            this.textMarca = new System.Windows.Forms.TextBox();
-            this.textPrecio = new System.Windows.Forms.TextBox();
-            this.textStock = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.LblEliminar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -66,6 +66,51 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(306, 439);
             this.panel1.TabIndex = 0;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(149, 221);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(151, 27);
+            this.btnGuardar.TabIndex = 10;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
+            // 
+            // textStock
+            // 
+            this.textStock.Location = new System.Drawing.Point(88, 173);
+            this.textStock.Name = "textStock";
+            this.textStock.Size = new System.Drawing.Size(212, 22);
+            this.textStock.TabIndex = 9;
+            // 
+            // textPrecio
+            // 
+            this.textPrecio.Location = new System.Drawing.Point(88, 127);
+            this.textPrecio.Name = "textPrecio";
+            this.textPrecio.Size = new System.Drawing.Size(212, 22);
+            this.textPrecio.TabIndex = 8;
+            // 
+            // textMarca
+            // 
+            this.textMarca.Location = new System.Drawing.Point(88, 93);
+            this.textMarca.Name = "textMarca";
+            this.textMarca.Size = new System.Drawing.Size(212, 22);
+            this.textMarca.TabIndex = 7;
+            // 
+            // textDescripcion
+            // 
+            this.textDescripcion.Location = new System.Drawing.Point(88, 53);
+            this.textDescripcion.Name = "textDescripcion";
+            this.textDescripcion.Size = new System.Drawing.Size(212, 22);
+            this.textDescripcion.TabIndex = 6;
+            // 
+            // textNombre
+            // 
+            this.textNombre.Location = new System.Drawing.Point(88, 14);
+            this.textNombre.Name = "textNombre";
+            this.textNombre.Size = new System.Drawing.Size(212, 22);
+            this.textNombre.TabIndex = 5;
             // 
             // LblStock
             // 
@@ -114,75 +159,31 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.LblEliminar);
+            this.panel2.Controls.Add(this.btnEliminar);
             this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Location = new System.Drawing.Point(320, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(633, 439);
             this.panel2.TabIndex = 1;
             // 
-            // textNombre
+            // btnEliminar
             // 
-            this.textNombre.Location = new System.Drawing.Point(88, 14);
-            this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(212, 22);
-            this.textNombre.TabIndex = 5;
-            // 
-            // textDescripcion
-            // 
-            this.textDescripcion.Location = new System.Drawing.Point(88, 53);
-            this.textDescripcion.Name = "textDescripcion";
-            this.textDescripcion.Size = new System.Drawing.Size(212, 22);
-            this.textDescripcion.TabIndex = 6;
-            // 
-            // textMarca
-            // 
-            this.textMarca.Location = new System.Drawing.Point(88, 93);
-            this.textMarca.Name = "textMarca";
-            this.textMarca.Size = new System.Drawing.Size(212, 22);
-            this.textMarca.TabIndex = 7;
-            this.textMarca.TextChanged += new System.EventHandler(this.textMarca_TextChanged);
-            // 
-            // textPrecio
-            // 
-            this.textPrecio.Location = new System.Drawing.Point(88, 127);
-            this.textPrecio.Name = "textPrecio";
-            this.textPrecio.Size = new System.Drawing.Size(212, 22);
-            this.textPrecio.TabIndex = 8;
-            // 
-            // textStock
-            // 
-            this.textStock.Location = new System.Drawing.Point(88, 173);
-            this.textStock.Name = "textStock";
-            this.textStock.Size = new System.Drawing.Size(212, 22);
-            this.textStock.TabIndex = 9;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(149, 221);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(151, 27);
-            this.btnGuardar.TabIndex = 10;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Location = new System.Drawing.Point(169, 14);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(151, 27);
+            this.btnEliminar.TabIndex = 12;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(3, 14);
+            this.btnEditar.Location = new System.Drawing.Point(12, 12);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(151, 27);
             this.btnEditar.TabIndex = 11;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
-            // 
-            // LblEliminar
-            // 
-            this.LblEliminar.Location = new System.Drawing.Point(169, 14);
-            this.LblEliminar.Name = "LblEliminar";
-            this.LblEliminar.Size = new System.Drawing.Size(151, 27);
-            this.LblEliminar.TabIndex = 12;
-            this.LblEliminar.Text = "Eliminar";
-            this.LblEliminar.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -228,7 +229,7 @@
         private System.Windows.Forms.TextBox textMarca;
         private System.Windows.Forms.TextBox textDescripcion;
         private System.Windows.Forms.TextBox textNombre;
-        private System.Windows.Forms.Button LblEliminar;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
